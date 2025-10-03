@@ -1,0 +1,41 @@
+@url = http://localhost:5104/api
+
+GET {{url}}/people
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET {{url}}/people/3
+Accept: application/json
+Content-Type: application/json
+
+###
+
+POST {{URL}}/people
+Accept: application/json
+Content-Type: application/json
+{
+  "name":"Maria Aparecia",
+  "sex":"M"
+}
+
+### 
+
+PATCH {{URL}}/people/3
+Accept: application/json
+Content-Type: application/json-patch+json
+[
+  {    
+    "path": "/Sex",
+    "op": "replace",    
+    "value": "M"
+  },
+  {    
+    "path": "/Name",
+    "op": "replace",    
+    "value": "Cezario C. Dias"
+  }
+]
+
+
