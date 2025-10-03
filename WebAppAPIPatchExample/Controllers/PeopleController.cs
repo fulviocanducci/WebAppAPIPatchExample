@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using System.Collections.Generic;
 using System.Net.Mime;
-using System.Threading.Tasks;
 using WebAppAPIPatchExample.Models;
 namespace WebAppAPIPatchExample.Controllers
 {
