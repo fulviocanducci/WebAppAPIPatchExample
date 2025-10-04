@@ -13,21 +13,9 @@ namespace WebAppAPIPatchExample.Models
         [JsonProperty("name")]
         public string Name { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Digite o sexo M para masculino e F para feminino.")]
-        [MaxLength(1, ErrorMessage = "Número máximo de caracteres: 1.")]
-        [AllowedValues("M", "F", ErrorMessage = "Escolhe M ou F")]
-        [JsonProperty("sex")]
-        public string Sex { get; set; } = string.Empty; // m ou f
-
-        [JsonProperty("sexDescription")]
-        public string SexDescription
-        {
-            get
-            {
-                return string.Equals(Sex, "M", StringComparison.OrdinalIgnoreCase) 
-                    ? "Masculino" 
-                    : "Feminino";
-            }
-        }
+        [Required(ErrorMessage = "Digite true ou false")]
+        [AllowedValues(true, false, ErrorMessage = "Digite true ou false.")]
+        [JsonProperty("status")]
+        public bool Status { get; set; }
     }
 }

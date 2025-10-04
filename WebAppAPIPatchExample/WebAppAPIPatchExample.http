@@ -6,7 +6,7 @@ Content-Type: application/json
 
 ###
 
-GET {{url}}/people/3
+GET {{url}}/people/1
 Accept: application/json
 Content-Type: application/json
 
@@ -16,25 +16,21 @@ POST {{URL}}/people
 Accept: application/json
 Content-Type: application/json
 {
-  "name":"Maria Aparecia",
-  "sex":"M"
+  "name":"Joenh Jr.",
+  "sex":"M",
+  "status": false
 }
 
 ### 
 
-PATCH {{URL}}/people/3
+PATCH {{URL}}/people/1
 Accept: application/json
-Content-Type: application/json-patch+json
+Content-Type: application/json
 [
   {    
-    "path": "/Sex",
+    "path": "/Status",
     "op": "replace",    
-    "value": "M"
-  },
-  {    
-    "path": "/Name",
-    "op": "replace",    
-    "value": "Cezario C. Dias"
+    "value": true
   }
 ]
 

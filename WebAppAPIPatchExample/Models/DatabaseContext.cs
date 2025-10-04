@@ -14,8 +14,7 @@ namespace WebAppAPIPatchExample.Models
                 x.HasKey(x => x.Id);
                 x.Property(x => x.Id).HasColumnName("id");
                 x.Property(x => x.Name).HasColumnName("name").HasMaxLength(100).IsRequired();
-                x.Property(x => x.Sex).HasColumnName("sex").HasMaxLength(1).IsRequired();
-                x.Ignore(x => x.SexDescription);
+                x.Property(x => x.Status).HasColumnName("status");
             });
         }
     }

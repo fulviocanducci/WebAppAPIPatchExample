@@ -55,7 +55,7 @@ namespace WebAppAPIPatchExample.Controllers
         }
 
         [HttpPatch("{id}")]
-        [Consumes("application/json-patch+json")]
+        [Consumes("application/json")]
         [ProducesResponseType(typeof(People), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
